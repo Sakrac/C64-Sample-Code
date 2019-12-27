@@ -1,6 +1,7 @@
-assets/*
-!assets/.gitignore
-protected/runtime/*
-!protected/runtime/.gitignore
-protected/data/*.db
-themes/classic/views/
+*.lst
+*.vs
+*.sym
+SnowEffect/bin
+SnowEffect/lst
+imgui.ini
+IceBro.cfg
