@@ -16,6 +16,19 @@
 
 ;----
 
+; Add signed byte to 16 bit
+	clc	; clear carry, if already clear skip this
+	tax	; just get N flag of Accumulator, if already set skip this
+	bpl .pos
+	dec Value16+1
+.pos	adc Value16
+	sta Value16
+	bcc .nover
+	inc Value16+1
+.nover
+
+;---
+
 ; multiply a * x
 	temp Shift.w	; temp means temporary storage, .w means 16 bit value
 	temp Result.w
